@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 span {
   color: var(--primary);
 }
@@ -56,7 +60,6 @@ p {
   align-items: center;
   background-image: url(images/tailor-making-a-dress-H3TH284.jpeg);
   background-position: center;
-  background-size: 100%;
   position: relative;
 }
 
@@ -72,6 +75,11 @@ p {
 .nav-bar-main-wrapper {
   position: absolute;
   padding: 30px 0 0 0;
+  gap: 60px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
 }
 
 .main-nav-bar{
@@ -125,24 +133,30 @@ p {
 .main-page-content {
   display: flex;
   gap: 50px;
+  padding: 0 7%;
 }
+
 
 .welcome-text {
   text-transform: uppercase;
   color: var(--primary);
   font-weight: 500;
   font-family: 'Alata', sans-serif;
-  font-size: 16px;
+  font-size: 1vw;
 }
 
 .welcome-header {
   font-family: 'Alata', sans-serif;
-  font-size: 60px;
+  font-size: 65px;
   color: white;
-  line-height: 5.5rem;
   letter-spacing: 1px;
+  line-height: 100%;
 }
-
+@media (max-width:900px) {
+  .welcome-header {
+    font-size: 50px;
+  }
+}
 .welcome-para {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -167,50 +181,66 @@ p {
   color: var(--secondary);
 }
 
-.main-page-icon {
-  color: var(--white);
-  font-size: 20px;
-  margin: 200px 250px;
-  /* padding: 0 0 0 250px; */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px solid white;
+.right_wrapper{
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: var(--white);
-}
-
-.main-page-icon {
-  color: var(--primary);
-}
-
-.pulse {
-  animation: pulse-animation 2s infinite;
-}
-
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(241, 162, 27, 0.2);
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  .main-page-icon {
+    color: var(--white);
+    font-size: 20px;
+    /* padding: 0 0 0 250px; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
   }
-  100% {
-    box-shadow: 0 0 0 20px rgba(230, 140, 21, 0);
+
+  .main-page-icon {
+    color: var(--primary);
   }
-}
+  
+  .pulse {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(241, 162, 27, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(230, 140, 21, 0);
+    }
+  }
+}  
 
 .main-page-words {
-  width: 47%;
+  width: 100%;
+    padding: 0;
 }
 
-.main-page-content {
-  padding: 70px 75px;
-}
+/* .main-page-content {
+  padding: 0;    padding: 55px 0 0 80px;
+} */
 
 .list-of-socials {
   display: flex;
   gap: 20px;
-  padding: 55px 0 0 0;
+  padding: 55px 0 0 80px;
+}
+
+@media (max-width:769px) {
+  .list-of-socials {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+  }
+  
 }
 
 .each-social {
@@ -243,6 +273,44 @@ p {
   position: relative;
 }
 
+@media (max-width:770px) {
+  
+  .experienced-tailor-innner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .experienced-title {
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding: 0 0 30px 0 !important;
+    font-size: 50px;
+  }
+
+  .experienced-para {
+    border: none !important;
+
+  }
+
+  .experienced-tailor-img {
+    /* position: relative !important; */
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100% !important;
+    height: 522px;
+    top: 52%;
+    right: 10%;
+  }
+
+  
+}
+
+
+
 .experienced-tailor-innner-wrapper {
   display: flex;
   padding: 100px 0 100px 0;
@@ -263,19 +331,21 @@ p {
   display: flex;
     justify-content: center;
     padding: 20px 0;
-    width: 784px;
+    width: 70%;
     position: relative;
     height: 522px;
-    top: 52%;
-    right: 10%;
+    /* top: 52%;
+    right: 10%; */
+    margin: 0 auto;
 }
 
 .experienced-tailor-img img {
   position: absolute;
-  left: 35%;
-  width: 100%;
-  height: 100%;
-  top: 10%;
+    /* left: 35%; */
+    width: 100%;
+    height: 100%;
+    /* top: 10%; */
+    object-fit: cover;
 }
 
 /* .experienced-tailor-img img {
@@ -340,6 +410,7 @@ p {
   display: flex;
   gap: 60px;
   padding: 0 0 100px 0;
+  flex-wrap: wrap;
 }
 
 .services-header {
@@ -353,6 +424,20 @@ p {
   gap: 10px;
   padding: 20px 0;
   padding: 100px 0 10px 0;
+  /* flex-wrap: wrap; */
+}
+
+.each-card , .each-card-black {
+  float: 1 1 0;
+}
+
+.each-card, .each-card-black {
+  min-width: 30%;
+  max-width: 100%;
+}
+
+.services-each-card {
+  min-width: 47%;
 }
 
 .list-of-cards-2 {
@@ -403,6 +488,11 @@ p {
 
 .services-words {
   padding: 220px 0 0 0;
+  flex: 1 1 0;
+}
+
+.services-cards {
+  flex: 1 1 0;
 }
 
 .number-percentage {
@@ -422,10 +512,12 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 150px 0 120px;
+  flex-wrap: wrap;
 }
 
 .each-counter {
   text-align: center;
+  min-width: 25%;
 }
 
 .counter-icon span{
@@ -438,8 +530,8 @@ p {
 }
 
 .long-img {
-  width: 540px;
-  height: 675px;
+  width: 100%;
+  height: 50%;
   padding: 10px 0 10px 0;
 }
 
@@ -449,6 +541,11 @@ p {
   transition: opacity 5s ease;;
 }
 
+@media (max-width:690px) {
+  .long-img {
+    min-width: 100% !important;
+  }
+}
 
 
 
@@ -555,6 +652,23 @@ p {
 .why-choose-us-list {
   display: flex;
   gap: 10px;
+}
+
+@media (max-width:770px) {
+  .why-choose-us-list {
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+
+  .testimonials-inner-wrapper {
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+
+  .list-of-blogs {
+    display: flex;
+    flex-wrap: wrap ;
+  }
 }
 
 .choose-list {
@@ -1384,4 +1498,52 @@ ul, li {
 }
 
 
-/* ------------------------------------------------faqs-page-start---------------------------------------------- */
+/* ------------------------------------------------faqs-page-end---------------------------------------------- */
+
+
+/* Default styles */
+
+/* Add your default styles here */
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+  .main-nav-bar {
+    width: 100%; /* Make the navigation bar full width on smaller screens */
+  }
+  .main-page-content {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    gap: 20px; /* Add spacing between elements */
+  }
+
+  .main-page-icon {
+    margin: 20px auto; /* Center the icon on smaller screens */
+  }
+  
+  .each-social {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  /* Add more responsive styles as needed */
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Further adjust padding for very small screens */
+  }
+
+  .discover-btn-inner {
+    padding: 10px 20px; /* Decrease button padding */
+  }
+
+  .each-social {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+  /* Add more responsive styles as needed */
+}
