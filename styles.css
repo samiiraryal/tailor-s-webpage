@@ -209,16 +209,16 @@ p {
     animation: pulse-animation 2s infinite;
   }
   
-  @keyframes pulse-animation {
-    0% {
-      box-shadow: 0 0 0 0px rgba(241, 162, 27, 0.2);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(230, 140, 21, 0);
-    }
-  }
 }  
 
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(241, 162, 27, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(230, 140, 21, 0);
+  }
+}
 .main-page-words {
   width: 100%;
     padding: 0;
@@ -239,6 +239,18 @@ p {
     padding: 0;
     display: flex;
     justify-content: left;
+  }
+
+  .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .each-our-team {
+    
+    width: 100%;
   }
   
 }
@@ -513,6 +525,28 @@ p {
   justify-content: space-between;
   padding: 150px 0 120px;
   flex-wrap: wrap;
+}
+
+@media (max-width:1030px) {
+  .each-counter {
+    width: 50%;
+  }
+}
+
+@media (max-width:769px) {
+  .each-counter {
+    width: 100%;
+  }
+
+  .service-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .long-img, .small-img {
+    width: 100%;
+  }
+  
 }
 
 .each-counter {
@@ -866,6 +900,7 @@ p {
   display: flex;
   gap: 60px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ul, li {
@@ -890,7 +925,20 @@ ul, li {
 }
 
 .each-footer-part {
-  width: 25%;
+  width: 21%;
+}
+
+@media (max-width:1000px) {
+  .each-footer-part {
+    width: 30%;
+  }
+}
+
+@media (max-width:660px) {
+  .each-footer-part {
+    width: 100%;
+  }
+  
 }
 
 .footer-logo-img {
@@ -961,6 +1009,20 @@ ul, li {
   display: flex;
   gap: 60px;
   padding: 50px 0 100px;
+}
+
+@media (max-width:1000px) {
+  .about-us-page-inner-wrapper {
+    display: flex;
+flex-wrap: wrap;
+  }
+
+  .wedding-suit-inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
 }
 
 .right-about-us {
@@ -1159,18 +1221,37 @@ ul, li {
 
 .wedding-suit-left-words {
   padding: 100px 0 0 0;
+  width: 100%;
 }
 
 .wedding-suit-left-words, .wedding-right-img {
-  flex: 1 1 0;
+  /* flex: 1 1 0; */
 }
 
 .left-and-right-content-inner-wrapper {
   display: flex;
+  
+}
+
+@media (max-width:769px) {
+  .left-and-right-content-inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding:0 0 30px 0;;
+  }
+
+  .left-content-img{
+    width: 100%;
+  }
+}
+
+.left-and-right-content-inner-wrapper div:nth-child(2) {
+  display: flex;
+  /* flex-direction: column-reverse; */
 }
 
 .left-content-img {
-  width: 570px;
+  width: 100%;
   /* height: 800px; */
 }
 
@@ -1182,11 +1263,12 @@ ul, li {
 }
 
 .left-content-img, .right-content-words {
-  flex: 1 1 0;
+  /* flex: 1 1 0; */
 }
 
 .right-content-words {
   padding: 15% 0 0 0%;
+  width: 80%;
 }
 
 .right-content-words-inner-wrapper {
@@ -1240,6 +1322,18 @@ ul, li {
 .our-team-list {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width:1000px) {
+
+  .our-team-list {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .each-our-team {
+    width: 48%;
+  }
 }
 
 .each-our-team img {
