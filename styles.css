@@ -156,6 +156,10 @@ p {
   .welcome-header {
     font-size: 50px;
   }
+
+  swiper-slide {
+    margin: 0 20%;
+  }
 }
 .welcome-para {
   font-family: 'Poppins', sans-serif;
@@ -251,6 +255,28 @@ p {
   .each-our-team {
     
     width: 100%;
+  }
+
+  .faqs-inner-wrapper {
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+
+  .faqs-words {
+    min-width: 100%;
+
+  }
+
+  .faqs-accordion-wrapper {
+    min-width: 100%;
+  }
+
+  .faqs-accordion-list-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .each-faq-accordion-item {
+    min-width: 100%;
   }
   
 }
@@ -460,6 +486,18 @@ p {
   }
   .services-inner-wrapper {
     flex-wrap: wrap;
+  }
+
+  .name-part {
+    /* flex-wrap: wrap; */
+  }
+
+  .first-name {
+    width: 100%;
+  }
+
+  .last-name {
+    width: 100%;
   }
 }
 
@@ -775,7 +813,7 @@ p {
 
 .testimonials-words,
 .testimonials-swipper {
-  flex: 1 1 0;
+  /* flex: 1 1 0; */
   padding: 10px;
   box-sizing: border-box;
 }
@@ -784,6 +822,7 @@ p {
   padding: 10px 40px 35px 40px;
   background-color: var(--secondary);
   height: 100%;
+  width: 96%;
 }
 
 .logo-swiper-img {
@@ -818,19 +857,18 @@ p {
 
 .name-part {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .first-name {
-  flex: 1px;
+  width: 46%;
   margin: 0 10px 0 0;
 }
 
 .last-name {
-  flex: 1
-  ;
+  width: 46%;
 }
 
 .contact-inner-wrapper {
@@ -841,7 +879,7 @@ p {
 
 .form-part,
 .form-words {
-  flex: 1 1 0;
+  width: 48%;
 }
 
 .sendmsg-btn {
@@ -987,6 +1025,12 @@ ul, li {
     width: 50%;
     flex: 1;
   }
+
+  .content-inner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  
 }
 
 @media (max-width:700px) {
@@ -1084,7 +1128,13 @@ flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
-  
+  .contact-inner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .form-part, .form-words {
+    width: 100%;
+  }
 }
 
 .right-about-us {
@@ -1293,6 +1343,7 @@ flex-wrap: wrap;
 .left-and-right-content-inner-wrapper {
   display: flex;
   
+  
 }
 
 @media (max-width:769px) {
@@ -1307,13 +1358,21 @@ flex-wrap: wrap;
   }
 }
 
+@media (max-width:1000px) {
+  .left-and-right-content-inner-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 30px 0;
+  }
+}
+
 .left-and-right-content-inner-wrapper div:nth-child(2) {
   display: flex;
   /* flex-direction: column-reverse; */
 }
 
 .left-content-img {
-  width: 100%;
+  width: 80%;
   /* height: 800px; */
 }
 
@@ -1343,6 +1402,10 @@ flex-wrap: wrap;
 
 .left-and-right-content-main-wrapper {
   padding: 100px 0;
+}
+
+.left-and-right-content-main-wrapper div:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
 
