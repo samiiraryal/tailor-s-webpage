@@ -1802,3 +1802,36 @@ flex-wrap: wrap;
 }
 
 /* -----------------------------------------------------products-page-end---------------------------------------------- */
+
+
+
+
+/* -----------------------------------------------------fabrics-page-start---------------------------------------------- */
+
+.fabrics-inner-wrapper {
+  padding: 100px 0;
+}
+
+.fabrics-para {
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.fabrics-sub-header {
+  color: var(--primary);
+}
+
+.fabrics-words-main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 11% ;
+}
+
+.fabrics-slider-wrapper {
+  padding: 30px 0 0 0;
+}
+
+
+/* -----------------------------------------------------fabrics-page-end---------------------------------------------- */
