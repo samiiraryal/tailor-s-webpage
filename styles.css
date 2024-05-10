@@ -58,7 +58,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(images/tailor-making-a-dress-H3TH284.jpeg);
+  background-image: url(images/depositphotos_417426084-stock-illustration-tailoring-crafting-hobby-at-home.jpg);
   background-position: center;
   position: relative;
 }
@@ -190,7 +190,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
   .main-page-icon {
     color: var(--white);
     font-size: 20px;
@@ -484,9 +484,7 @@ p {
     width: 100%;
     flex-wrap: wrap;
   }
-  .services-inner-wrapper {
-    flex-wrap: wrap;
-  }
+
 
   .name-part {
     /* flex-wrap: wrap; */
@@ -562,7 +560,16 @@ p {
 
 .services-words {
   padding: 220px 0 0 0;
-  flex: 1 1 0;
+  width: 40%;
+}
+
+@media (max-width:1200px) {
+  .services-inner-wrapper {
+    flex-direction: column;
+  }
+  .services-words {
+    width: 100%;
+  }
 }
 
 .services-cards {
@@ -668,6 +675,7 @@ p {
 ----------------------------------------------
 .left-side-content-service {
   position: relative;
+  width: 100% !important;
 }
 
 .hover-content {
@@ -688,7 +696,6 @@ p {
 }
 
 .small-img {
-  width: 540px;
   height: 531px;
   padding: 10px 0 10px 0;
 }
@@ -703,6 +710,9 @@ p {
 .service-content-wrapper {
   display: flex;
   gap: 20px;
+  .left-side-content-service {
+    width: 100%;
+  }
 }
 
 .services-loadmore-btn {
@@ -1003,6 +1013,7 @@ ul, li {
   }
   .service-content-wrapper {
     flex-wrap: wrap;
+
   }
   .list-of-blogs {
     flex-wrap: wrap;
@@ -1820,6 +1831,7 @@ flex-wrap: wrap;
 
 .fabrics-sub-header {
   color: var(--primary);
+  font-family: var(--header-font);
 }
 
 .fabrics-words-main-wrapper {
@@ -1835,3 +1847,14 @@ flex-wrap: wrap;
 
 
 /* -----------------------------------------------------fabrics-page-end---------------------------------------------- */
+
+.main-carousel-image {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/black-young-man-wearing-a-beautiful-suit-Z39AGUJ-819x1024.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  border: none;
+  border-radius: 3%;
+  box-shadow: -31px -30px 22px rgba(17, 14, 18, 0.6);
+}
