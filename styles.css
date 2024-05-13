@@ -41,8 +41,11 @@ p {
   color: var(--white);
 }
 
-.dropdown-menu {
-  background-color: var(--secondary);
+.dropdown-menu a{
+}
+
+.dropdown-item a{
+  color: var(--secondary) !important;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -54,11 +57,11 @@ p {
 .Welcomepage{
   /* width: 100vw; */
   max-width: 100vw;
-  height: 700px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(images/depositphotos_417426084-stock-illustration-tailoring-crafting-hobby-at-home.jpg);
+  /* background-image: url(images/depositphotos_417426084-stock-illustration-tailoring-crafting-hobby-at-home.jpg); */
   background-position: center;
   position: relative;
 }
@@ -86,6 +89,7 @@ p {
   width: 60%;
   display: flex;
   justify-content: space-around;
+  color: var(--primary) !important;
 }
 
 .main-nav-bar li {
@@ -123,7 +127,7 @@ p {
 }
 
 .nav-item a {
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 .nav-item a:hover {
@@ -411,6 +415,7 @@ p {
 .below-top-title-header {
   text-align: center;
   color: var(--secondary);
+  text-transform: capitalize;
 }
 
 .about-para {
@@ -745,6 +750,9 @@ p {
   /* background-color: var(--primary); */
 }
 
+.inner-nav-item a{
+  color: var(--white);
+}
 
 .nav-item {
   /* background-color: var(--primary); */
@@ -1135,7 +1143,7 @@ ul, li {
 .about-us-page-inner-wrapper {
   display: flex;
   gap: 60px;
-  padding: 50px 0 100px;
+  padding: 120px 0 100px;
 }
 
 @media (max-width:1000px) {
@@ -1245,6 +1253,71 @@ flex-wrap: wrap;
   background-color: var(--gray-background-color);
 }
 
+.mission-vision-main-wrapper {
+  display: flex;
+}
+
+.mission-main-wrapper {
+  display: flex;
+  width: 48%;
+}
+
+.vision-main-wrapper {
+  display: flex;
+  position: absolute;
+  top: 57%;
+  width: 48%;
+  right: 0;
+}
+
+.mission-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.mission-words {
+  padding: 0 0 0 20px;
+  width: 78%;
+  
+}
+
+.mission-desc {
+  font-style: italic;
+  color: var(--gray-para-color);
+}
+
+@media (max-width:1200px) {
+  .about-us-page-inner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .left-about-us {
+    width: 100%;
+  }
+
+  .vision-main-wrapper {
+    position: relative;
+  }
+}
+
+@media (max-width:1000px) {
+
+  .right-about-us {
+    width: 100%;
+  }
+
+  .mission-main-wrapper {
+    width: 100%;
+  }
+
+  .vision-main-wrapper{
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+  }
+}
 
 /* -------------------------------------------------------about-us-page-end--------------------------------------------------- */
 
@@ -1263,7 +1336,45 @@ flex-wrap: wrap;
   height: 350px;
 }
 
+.our-branches-inner-wrapper {
+  padding: 120px 0; 
+}
 
+.branch-words-section {
+  padding: 15% 0;
+}
+
+.branch-words-section span {
+  padding: 0 6px 0 0;
+}
+
+.branch-para {
+  display: inline;
+}
+
+.list-of-branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* height: 250px; */
+  overflow: hidden;
+  margin: 0 0 30px 0;
+  padding: 50px 0 0 0;
+}
+
+.map-branch-section {
+  height: 250px;
+  overflow: hidden;
+}
+
+.each-branch {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 0 30px 0;
+}
 /* -------------------------------------------------------contact-page-end--------------------------------------------------- */
 
 
@@ -1375,6 +1486,22 @@ flex-wrap: wrap;
   }
 
   .left-content-img{
+    width: 100%;
+  }
+
+  .mission-vision-main-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .skills-section-inner-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .progress-section {
+    width: 100%;
+  }
+
+  .skill-listing {
     width: 100%;
   }
 }
@@ -1540,6 +1667,7 @@ flex-wrap: wrap;
   text-align: center;
   padding: 0 0 30px 0;
 }
+
 
 
 /* ------------------------------------------------our-team-page-end---------------------------------------------- */
@@ -1845,6 +1973,31 @@ flex-wrap: wrap;
   padding: 30px 0 0 0;
 }
 
+.fabrics-slider-section {
+  height: 150px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.glide__slide {
+  width: 250px !important;
+  height: 300px !important;
+  border-radius: 10%;
+}
+
+.glide__slide img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+overflow: hidden;
+}
+
+.fabrics-main-wrapper {
+  padding: 120px 0;
+}
 
 /* -----------------------------------------------------fabrics-page-end---------------------------------------------- */
 
@@ -1855,6 +2008,6 @@ flex-wrap: wrap;
   background-position: center;
   padding: 50px;
   border: none;
-  border-radius: 3%;
+  /* border-radius: 3%; */
   box-shadow: -31px -30px 22px rgba(17, 14, 18, 0.6);
 }
