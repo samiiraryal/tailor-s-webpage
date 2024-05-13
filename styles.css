@@ -575,6 +575,15 @@ p {
   .services-words {
     width: 100%;
   }
+
+}
+
+@media (max-width:1400px) {
+  .left-content-blog-inner-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  }
 }
 
 .services-cards {
